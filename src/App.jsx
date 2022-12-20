@@ -12,6 +12,11 @@ export const App = () => {
     fontSize: "40px",
   };
 
+  const contentPinkStyle = {
+    color: "pink",
+    fontSize: "20px",
+  };
+
   return (
     // JSXは一つのタグで囲んであげる必要がある
     <>
@@ -19,6 +24,7 @@ export const App = () => {
       <h1 style={contentStyle}>こんにちは！</h1>
       {/* cssを記述する際は、オブジェクトとして記述する */}
       <p style={{ color: "red" }}>お元気ですか？</p>
+      <p style={contentPinkStyle}>元気です！</p>
       {/* キャメル型で記述する */}
       <button onClick={onClickButton}>ボタン</button>
     </>

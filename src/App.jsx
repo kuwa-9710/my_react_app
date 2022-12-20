@@ -28,7 +28,8 @@ export const App = () => {
       {/* cssを記述する際は、オブジェクトとして記述する */}
       <p style={{ color: "red" }}>お元気ですか？</p>
       {/* コンポーネントを表示する */}
-      <ColoredMessage />
+      {/*　　タグの間に記述するとchildrenとして扱われる */}
+      <ColoredMessage color="blue">元気です！</ColoredMessage>
       <p style={contentPinkStyle}>元気です！</p>
       {/* キャメル型で記述する */}
       <button onClick={onClickButton}>ボタン</button>

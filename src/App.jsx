@@ -1,11 +1,15 @@
+import { useState } from "react";
 // コンポーネントをインストール
 import { ColoredMessage } from "./components/ColoredMessage";
 
 // 他のファイルで使用できるようにするためにexportをする
 export const App = () => {
+
+  const [num, setNum] = useState(0);
+
   // 関数の作成はreturnの前で行う
   const onClickButton = () => {
-    alert();
+    setNum((prev) => prev + 1);
   };
 
   // cssを変数に格納してから適用することもできる
@@ -23,7 +27,6 @@ export const App = () => {
   return (
     // JSXは一つのタグで囲んであげる必要がある
     <>
-      {console.log("TEST")}
       <h1 style={contentStyle}>こんにちは！</h1>
       {/* cssを記述する際は、オブジェクトとして記述する */}
       <p style={{ color: "red" }}>お元気ですか？</p>
@@ -33,6 +36,7 @@ export const App = () => {
       <p style={contentPinkStyle}>元気です！</p>
       {/* キャメル型で記述する */}
       <button onClick={onClickButton}>ボタン</button>
+      <p>{num}</p>
     </>
   );
 };

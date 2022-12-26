@@ -10,6 +10,7 @@ export const App = () => {
   // 関数の作成はreturnの前で行う
   const onClickButton = () => {
     setNum((prev) => prev + 1);
+    // setNum(num + 1);と同じ動作をしている
   };
 
   // cssを変数に格納してから適用することもできる
